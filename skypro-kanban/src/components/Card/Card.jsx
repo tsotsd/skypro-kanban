@@ -36,4 +36,5 @@ const Card = ({ category, title, date }) => {
   </div> );
 }
  
+
 export default Card;
