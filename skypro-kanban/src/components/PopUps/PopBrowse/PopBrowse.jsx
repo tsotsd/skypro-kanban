@@ -38,9 +38,7 @@ const PopBrowse = () => {
                 <textarea className="form-browse__area" name="text" id="textArea01"  readOnly placeholder="Введите описание задачи..."></textarea>
               </div>
             </form>
-
             <Calendar />
-
           </div>
           <div className="theme-down__categories theme-down">
             <p className="categories__p subttl">Категория</p>

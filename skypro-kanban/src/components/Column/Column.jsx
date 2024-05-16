@@ -12,5 +12,6 @@ const Column = ({ title }) => {
     </div>
   </div>	 );
 }
+
  
 export default Column;
