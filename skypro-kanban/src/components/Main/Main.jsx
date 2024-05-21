@@ -1,4 +1,4 @@
-import { cardList } from "../../data";
+
 import Column from "../Column/Column";
 const statusList = [
   "Без статуса",
@@ -7,7 +7,7 @@ const statusList = [
   "Тестирование",
   "Готово",
 ];
-const Main = () => {
+const Main = ({cardList}) => {
     return (    <main className="main">
     <div className="container">
       
@@ -19,13 +19,7 @@ const Main = () => {
               title={status}
               cardList={cardList.filter((card) => card.status === status)} /> 
           ))}
-          {/* <Column title="Без статуса" />  */}
-          {/* <Column title="Нужно сделать" /> 
-          <Column title="В работе" /> 
-          <Column title="Тестирование" /> 
-          <Column title="Готово" />  */}
         </div>
-      
       </div>
     </div>
   </main> );
