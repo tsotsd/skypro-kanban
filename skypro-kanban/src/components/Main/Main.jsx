@@ -1,13 +1,8 @@
 
 import { useEffect, useState } from "react";
 import Column from "../Column/Column";
-const statusList = [
-  "Без статуса",
-  "Нужно сделать",
-  "В работе",
-  "Тестирование",
-  "Готово",
-];
+import { statusList } from "../../data";
+
 const Main = ({cardList}) => {
 
   const [isLoading, setLoading] = useState(true);
