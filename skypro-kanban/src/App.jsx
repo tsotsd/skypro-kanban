@@ -13,7 +13,6 @@ function App() {
     <PopExit />
     <PopNewCard />
     <PopBrowse />
-
     <Header setCards={setCards} cards={cards}/>
     <Main cardList={cards}/>
    </div>)
