@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Column from "../Column/Column";
 import { statusList } from "../../data";
+import { GlobalStyle } from "../../global.styled";
 
 const Main = ({cardList}) => {
 
@@ -12,7 +13,10 @@ const Main = ({cardList}) => {
       }, 2000)
     }, []);
     
-    return (    <main className="main">
+    return (   
+      <>
+      <GlobalStyle />
+      <main className="main">
     <div className="container">
       
       <div className="main__block">
@@ -24,10 +28,12 @@ const Main = ({cardList}) => {
               title={status}
               cardList={cardList.filter((card) => card.status === status)} /> 
           ))}
+          
         </div>
       </div>
     </div>
-  </main> );
+  </main> 
+  </>);
 }
  
 
