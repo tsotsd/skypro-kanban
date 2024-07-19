@@ -1,4 +1,6 @@
 import { useState } from "react";
+import * as S from "./header.styled"
+import { Container } from "../shared.styled";
 
 const Header = ({ setCards, cards }) => {
   const [isOpen, setOpen] = useState(false)
@@ -18,22 +20,24 @@ const Header = ({ setCards, cards }) => {
     const newCardList = [...cards, newCard]
     setCards(newCardList);
   }
-
-    return (    <header className="header">
-    <div className="container">
-      <div className="header__block">
-        <div className="header__logo _show _light">
+  return (
+    <S.Header>
+    <Container>
+      <S.HeaderBlock>
+        <S.HeaderLogo>
           <a href="" target="_self"><img src="images/logo.png" alt="logo" /></a>
-        </div>
-        <div className="header__logo _dark">
+        </S.HeaderLogo>
+
+        {/* <div className="header__logo _dark">
           <a href="" target="_self"><img src="images/logo_dark.png" alt="logo" /></a>
-        </div>
+        </div> */}
         <nav className="header__nav">
+          
           <button className="header__btn-main-new _hover01" onClick={onAddCadr}>Создать новую задачу</button>
           <div className="header__user _hover02" onClick={handleOpen}>Ivan Ivanov</div>
       
           {isOpen && (          
-            <div className="header__pop-user-set pop-user-set">
+            <div className="header__pop-user-set4 pop-user-set">
             <p className="pop-user-set__name">Ivan Ivanov</p>
             <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
             <div className="pop-user-set__theme">
@@ -44,9 +48,9 @@ const Header = ({ setCards, cards }) => {
           </div>
         )}
         </nav>					
-      </div>
-    </div>			
-  </header> );
+        </S.HeaderBlock>
+        </Container>
+    </S.Header>)			
 }
  
 

@@ -679,12 +679,12 @@
   display: none;
 }
 
-.header {
+/* .header {
   width: 100%;
   margin: 0 auto;
   background-color: #FFFFFF;
-}
-.header__block {
+} */
+/* .header__block {
   height: 70px;
   display: flex;
   flex-wrap: nowrap;
@@ -694,7 +694,7 @@
   top: 0;
   left: 0;
   padding: 0 10px;
-}
+} */
 .header__logo img {
   width: 85px;
 }
