@@ -23,4 +23,3 @@ const HeaderBlock = styled.div`
 }  `
 
 export {Header, HeaderBlock, HeaderLogo}
-
