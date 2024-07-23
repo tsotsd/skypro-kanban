@@ -9,7 +9,7 @@ const Header = ({ setCards, cards }) => {
     setOpen((prev) => !prev);
   };
 
-  const onAddCadr = () => {
+  const onAddCard = () => {
     const newCard = {
       id: Date.now(),
       title: "TEST",
@@ -33,7 +33,7 @@ const Header = ({ setCards, cards }) => {
         </div> */}
         <nav className="header__nav">
           
-          <button className="header__btn-main-new _hover01" onClick={onAddCadr}>Создать новую задачу</button>
+          <button className="header__btn-main-new _hover01" onClick={onAddCard}>Создать новую задачу</button>
           <div className="header__user _hover02" onClick={handleOpen}>Ivan Ivanov</div>
       
           {isOpen && (          
