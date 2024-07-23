@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as S from "./header.styled"
+import * as S from "./Header.styled"
 import { Container } from "../shared.styled";
 
 const Header = ({ setCards, cards }) => {
