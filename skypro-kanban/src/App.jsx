@@ -6,7 +6,9 @@ import PopBrowse from './components/PopUps/PopBrowse/PopBrowse'
 import PopExit from './components/PopUps/PopExit/PopExit'
 import PopNewCard from './components/PopUps/PopNewCard/PopNewCard'
 import { cardList } from './data'
-import { GlobalStyle } from './global.styled'
+import {GlobalStyle} from './global.styled'
+
+
 
 function App() {
    const [cards, setCards] = useState(cardList);
