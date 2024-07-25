@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const Container = styled.div `
   max-width: 1260px;
@@ -8,3 +8,24 @@ const Container = styled.div `
   `
 
 export {Container}
+
+export const Purple = css`
+ background-color: #b4fdd1;
+ color: #06b16e;
+ `;
+
+export const Green = css`
+      background-color: #b4fdd1;
+      color: #06b16e;
+`;
+
+
+export const Orange = css`
+      background-color: #ffe4c2;
+      color: #ff6d00;
+`;
+
+export const Gray = css`
+      background-color: #94a6be;
+      color: #ffffff;
+`;

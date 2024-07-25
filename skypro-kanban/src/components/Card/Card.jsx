@@ -17,8 +17,8 @@ const Card = ({ topic, title, date }) => {
     <div className="cards__card card">
       <div className="card__group">
          {/* <div className={`card__theme ${colorClass}`}> */}
-            <S.CardTopic $topicColor="_purple">
-              <S.TopicText topicColor="_purple">{topic}</S.TopicText>
+            <S.CardTopic $topic={topic}>
+              <S.TopicText>{topic}</S.TopicText>
           {/* <p className={colorClass}>{topic}</p> */}
             </S.CardTopic>
         </div>

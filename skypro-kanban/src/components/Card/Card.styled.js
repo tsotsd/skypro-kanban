@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { topicStyles } from '../../lib/topic';
+import { Gray, Green, Orange, Purple } from '../shared.styled';
 
 export const TopicText = styled.p`
   font-size: 10px;
@@ -12,12 +13,22 @@ export const CardTopic = styled.div`
   height: 20px;
   padding: 5px 14px;
   border-radius: 18px;
-  background-color: ${({ $topicColor }) =>
+  /* background-color: ${({ $topicColor }) =>
     topicStyles[$topicColor]?.backgroundColor || "#b4fdd1"};
 
-  ${TopicText} {
+  ${TopicText} 
+  {
     color: ${({ $topicColor }) => topicStyles[$topicColor]?.color || "#06b16e"};
-  }
+  } */
+  ${({$topic}) => { 
+    if($topic === 'Research')
+        return Green
+        else if($topic === 'Web Design')
+        return Orange
+    else if($topic === 'Research')
+        return Green
+    else return Gray
+   } }
 `;
 
 export const CardsItem = styled.div`
