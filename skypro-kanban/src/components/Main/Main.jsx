@@ -1,7 +1,8 @@
-
 import { useEffect, useState } from "react";
 import Column from "../Column/Column";
 import { statusList } from "../../data";
+import * as S from "./Main.styled";
+import { Container } from "../shared.styled";
 
 const Main = ({cardList}) => {
 
@@ -12,11 +13,11 @@ const Main = ({cardList}) => {
       }, 1000)
     }, []);
     
-    return (    <main className="main">
-    <div className="container">
-      
-      <div className="main__block">
-        <div className="main__content">
+    return (   
+      <S.Main>
+        <Container>
+          <S.MainBlock>
+            <S.MainContent>
           {isLoading && `Идет загрузка...`}
           {!isLoading && statusList.map((status) => (
               <Column 
@@ -24,10 +25,10 @@ const Main = ({cardList}) => {
               title={status}
               cardList={cardList.filter((card) => card.status === status)} /> 
           ))}
-        </div>
-      </div>
-    </div>
-  </main> );
+         </S.MainContent>
+        </S.MainBlock>
+      </Container>
+    </S.Main> );
 }
  
 

@@ -1,3 +1,6 @@
+import { topicStyles } from '../../lib/topic';
+import * as S from './Card.styled'
+
 const Card = ({ topic, title, date }) => {
 
   const colorList = {
@@ -8,11 +11,16 @@ const Card = ({ topic, title, date }) => {
 
   const colorClass = colorList[topic] || "_orange";
   
-    return (       <div className="cards__item">
+    return (       
+
+    <S.CardsItem>
     <div className="cards__card card">
       <div className="card__group">
-        <div className={`card__theme ${colorClass}`}>
-          <p className={colorClass}>{topic}</p>
+         {/* <div className={`card__theme ${colorClass}`}> */}
+            <S.CardTopic $topicColor="_purple">
+              <S.TopicText topicColor="_purple">{topic}</S.TopicText>
+          {/* <p className={colorClass}>{topic}</p> */}
+            </S.CardTopic>
         </div>
         <a href="#popBrowse" target="_self">
           <div className="card__btn">
@@ -41,8 +49,9 @@ const Card = ({ topic, title, date }) => {
           <p>{date}</p>
         </div>
       </div>
-    </div>
-  </div> );
+    </S.CardsItem>
+  );
+  
 }
  
 
