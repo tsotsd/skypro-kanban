@@ -25,8 +25,8 @@ export const CardTopic = styled.div`
         return Green
         else if($topic === 'Web Design')
         return Orange
-    else if($topic === 'Research')
-        return Green
+    else if($topic === 'Copywriting')
+        return Purple
     else return Gray
    } }
 `;
