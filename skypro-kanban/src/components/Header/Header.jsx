@@ -31,6 +31,7 @@ const Header = ({ setCards, cards }) => {
         {/* <div className="header__logo _dark">
           <a href="" target="_self"><img src="images/logo_dark.png" alt="logo" /></a>
         </div> */}
+        
         <nav className="header__nav">
           
           <button className="header__btn-main-new _hover01" onClick={onAddCard}>Создать новую задачу</button>

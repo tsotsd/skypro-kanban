@@ -23,7 +23,7 @@ export const CardTopic = styled.div`
   ${({$topic}) => { 
     if($topic === 'Research')
         return Green
-        else if($topic === 'Web Design')
+    else if($topic === 'Web Design')
         return Orange
     else if($topic === 'Copywriting')
         return Purple
