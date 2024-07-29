@@ -18,6 +18,7 @@ export const Orange = css`
       background-color: #ffe4c2;
       color: #ff6d00;
 `;
+
 export const Green = css`
       background-color: #b4fdd1;
       color: #06b16e;

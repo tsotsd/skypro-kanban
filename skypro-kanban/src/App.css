@@ -382,9 +382,9 @@
 .calendar__p span {
   color: #000000;
 }
-.calendar__block {
+/* .calendar__block {
   display: block;
-}
+} */
 .calendar__month {
   color: #94A6BE;
   font-size: 14px;
