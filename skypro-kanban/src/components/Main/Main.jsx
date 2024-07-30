@@ -4,6 +4,17 @@ import { statusList } from "../../data";
 import * as S from "./Main.styled";
 import { Container } from "../shared.styled";
 
+// import ReactDOM from 'react-dom';
+// import { BrowserRouter} from 'react-router-dom';
+// import App from './App';
+
+// ReactDOM.render(
+//   <BrowserRouter>
+//       <App />
+//   </BrowserRouter>,
+//   document.getElementById('root')
+// );
+
 const Main = ({cardList}) => {
 
   const [isLoading, setLoading] = useState(true);
