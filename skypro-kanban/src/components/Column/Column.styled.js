@@ -13,4 +13,11 @@ export const ColumnTitle = styled.div`
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  text-transform: uppercase;`
+  text-transform: uppercase;
+  `;
+
+  export const Cards = styled.div`
+    width: 100%;
+    display: block;
+    position: relative;
+    `;

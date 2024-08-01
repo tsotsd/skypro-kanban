@@ -1,9 +1,10 @@
+import * as S from "./Calendar.styled";
+
 const Calendar = () => {
     return (             <div className="pop-new-card__calendar calendar">
-
-      
+    
     <p className="calendar__ttl subttl">Даты</p>
-    <div className="calendar__block">
+    <S.CalendarBlock className="calendar__block">
       <div className="calendar__nav">
         <div className="calendar__month">Сентябрь 2023</div>
         <div className="nav__actions">
@@ -72,7 +73,7 @@ const Calendar = () => {
       <div className="calendar__period">
         <p className="calendar__p date-end">Срок исполнения: <span className="date-control">09.09.23</span></p>
       </div>
-    </div>
+    </S.CalendarBlock>
   </div> );
 }
  
