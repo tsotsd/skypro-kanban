@@ -12,14 +12,15 @@ const Card = ({ topic, title, date }) => {
               <S.TopicText>{topic}</S.TopicText>
           {/* <p className={colorClass}>{topic}</p> */}
             </S.CardTopic>
-        </div>
-        <a href="#popBrowse" target="_self">
+            <a href="#popBrowse" target="_self">
           <div className="card__btn">
             <div></div>
             <div></div>
             <div></div>
           </div>
         </a>
+        </div>
+
         <div className="card__content">
         <a href="" target="_blank">
           <h3 className="card__title">{title}</h3>
