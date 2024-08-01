@@ -1,16 +1,7 @@
-import { topicStyles } from '../../lib/topic';
 import * as S from './Card.styled'
 
 const Card = ({ topic, title, date }) => {
-
-  const colorList = {
-    "Web Design": "_orange",
-    Copywriting: "_purple",
-    Research: "_green"
-  };
-
-  const colorClass = colorList[topic] || "_orange";
-  
+ 
     return (       
 
     <S.CardsItem>
@@ -29,8 +20,7 @@ const Card = ({ topic, title, date }) => {
             <div></div>
           </div>
         </a>
-      </div>
-      <div className="card__content">
+        <div className="card__content">
         <a href="" target="_blank">
           <h3 className="card__title">{title}</h3>
         </a>
@@ -49,6 +39,8 @@ const Card = ({ topic, title, date }) => {
           <p>{date}</p>
         </div>
       </div>
+      </div>
+
     </S.CardsItem>
   );
   
