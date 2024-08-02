@@ -58,4 +58,6 @@ export const CalendarCells = styled.div`
   flex-wrap: wrap;
 `;
 
-
+export const CalendarPeriod = styled.div`
+  padding: 0 7px;
+`;

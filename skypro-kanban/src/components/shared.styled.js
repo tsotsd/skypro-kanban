@@ -7,7 +7,7 @@ const Container = styled.div`
   padding: 0 30px;
 `;
 
-export { Container };
+export { Container, hover01, hover02 };
 
 export const Purple = css`
   background-color: #e9d4ff;
@@ -29,3 +29,14 @@ export const Gray = css`
   color: #ffffff;
 `;
 
+const hover01 = css`
+&:hover{
+background-color: #33399b;
+}
+`;
+
+const hover02 = css`
+&:hover{
+  color: #33399b;
+}
+`;

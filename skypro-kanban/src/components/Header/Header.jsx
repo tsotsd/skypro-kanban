@@ -34,8 +34,9 @@ const Header = ({ setCards, cards }) => {
         
         <nav className="header__nav">
           
-          <button className="header__btn-main-new _hover01" onClick={onAddCard}>Создать новую задачу</button>
-          <div className="header__user _hover02" onClick={handleOpen}>Ivan Ivanov</div>
+          <S.HeaderButton onClick={onAddCard}>Создать новую задачу</S.HeaderButton>
+          
+          <S.HeaderUser onClick={handleOpen}>Ivan Ivanov</S.HeaderUser>
       
           {isOpen && (          
             <div className="header__pop-user-set4 pop-user-set">

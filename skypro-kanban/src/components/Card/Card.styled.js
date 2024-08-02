@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import { topicStyles } from '../../lib/topic';
-import { Gray, Green, Orange, Purple } from '../shared.styled';
+import styled from "styled-components";
+import { topicStyles } from "../../lib/topic";
+import { Gray, Green, Orange, Purple } from "../shared.styled";
 
 export const TopicText = styled.p`
   font-size: 10px;
@@ -20,15 +20,13 @@ export const CardTopic = styled.div`
   {
     color: ${({ $topicColor }) => topicStyles[$topicColor]?.color || "#06b16e"};
   } */
-  ${({$topic}) => { 
-    if($topic === 'Research')
-        return Green
-    else if($topic === 'Web Design')
-        return Orange
-    else if($topic === 'Copywriting')
-        return Purple
-    else return Gray
-   } }
+
+  ${({ $topic }) => {
+    if ($topic === "Research") return Green;
+    else if ($topic === "Web Design") return Orange;
+    else if ($topic === "Copywriting") return Purple;
+    else return Gray;
+  }}
 `;
 
 export const CardsItem = styled.div`
@@ -38,3 +36,24 @@ export const CardsItem = styled.div`
   animation-timing-function: linear;
 `;
 
+export const CardContent = styled.div`
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+`;
+
+export const CardTitle = styled.h3`
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 10px;
+`;
+
+export const CardDate = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`;
