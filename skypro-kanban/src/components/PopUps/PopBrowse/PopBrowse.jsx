@@ -12,7 +12,7 @@ const PopBrowse = () => {
             </div>
           </div>
           <div className="pop-browse__status status">
-            <p className="status__p subttl">Статус</p>
+            <p className="status__p ">Статус</p>
             <div className="status__themes">
               <div className="status__theme _hide">
                 <p>Без статуса</p>
