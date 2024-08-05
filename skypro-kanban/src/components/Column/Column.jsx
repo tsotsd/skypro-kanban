@@ -2,7 +2,7 @@ import Card from "../Card/Card";
 import { Cards, ColumnTitle, MainColumn } from "./Column.styled";
 const Column = ({ title, cardList }) => {
     return (           
-    <MainColumn className="column">
+    <MainColumn>
     <ColumnTitle>
       <p>{title}</p>
     </ColumnTitle>

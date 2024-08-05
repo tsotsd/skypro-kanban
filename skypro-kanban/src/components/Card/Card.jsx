@@ -5,21 +5,21 @@ const Card = ({ topic, title, date }) => {
     return (       
 
     <S.CardsItem>
-    <div className="cards__card card">
-      <div className="card__group">
+    <S.CardsCard>
+      <S.CardGroup>
          {/* <div className={`card__theme ${colorClass}`}> */}
             <S.CardTopic $topic={topic}>
               <S.TopicText>{topic}</S.TopicText>
           {/* <p className={colorClass}>{topic}</p> */}
             </S.CardTopic>
             <a href="#popBrowse" target="_self">
-          <div className="card__btn">
+          <S.CardBtn>
             <div></div>
             <div></div>
             <div></div>
-          </div>
+          </S.CardBtn>
         </a>
-        </div>
+      </S.CardGroup>
 
       <S.CardContent>
         <a href="" target="_blank">
@@ -42,7 +42,7 @@ const Card = ({ topic, title, date }) => {
       </S.CardContent>
       
       
-      </div>
+    </S.CardsCard>
 
     </S.CardsItem>
   );
