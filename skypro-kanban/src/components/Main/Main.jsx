@@ -1,7 +1,19 @@
-
 import { useEffect, useState } from "react";
 import Column from "../Column/Column";
 import { statusList } from "../../data";
+import * as S from "./Main.styled";
+import { Container } from "../shared.styled";
+
+// import ReactDOM from 'react-dom';
+// import { BrowserRouter} from 'react-router-dom';
+// import App from './App';
+
+// ReactDOM.render(
+//   <BrowserRouter>
+//       <App />
+//   </BrowserRouter>,
+//   document.getElementById('root')
+// );
 
 const Main = ({cardList}) => {
 
@@ -9,14 +21,14 @@ const Main = ({cardList}) => {
     useEffect(() => {
       setTimeout(() => {
         setLoading(false);
-      }, 2000)
+      }, 1000)
     }, []);
     
-    return (    <main className="main">
-    <div className="container">
-      
-      <div className="main__block">
-        <div className="main__content">
+    return (   
+      <S.Main>
+        <Container>
+          <S.MainBlock>
+            <S.MainContent>
           {isLoading && `Идет загрузка...`}
           {!isLoading && statusList.map((status) => (
               <Column 
@@ -24,10 +36,10 @@ const Main = ({cardList}) => {
               title={status}
               cardList={cardList.filter((card) => card.status === status)} /> 
           ))}
-        </div>
-      </div>
-    </div>
-  </main> );
+         </S.MainContent>
+        </S.MainBlock>
+      </Container>
+    </S.Main> );
 }
  
 
