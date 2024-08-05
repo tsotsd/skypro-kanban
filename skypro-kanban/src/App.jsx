@@ -7,13 +7,13 @@ import PopExit from './components/PopUps/PopExit/PopExit'
 import PopNewCard from './components/PopUps/PopNewCard/PopNewCard'
 import { cardList } from './data'
 import {GlobalStyle} from './global.styled'
-
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
    const [cards, setCards] = useState(cardList);
    return ( 
-   <>   
+   <Routes>   
    <GlobalStyle/>
    <div className="wrapper">
     <PopExit />
@@ -22,7 +22,7 @@ function App() {
     <Header setCards={setCards} cards={cards}/>
     <Main cardList={cards}/>
    </div>
-   </>
+   </Routes>
    );
 }
 
