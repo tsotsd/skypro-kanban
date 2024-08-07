@@ -8,12 +8,19 @@ import PopNewCard from './components/PopUps/PopNewCard/PopNewCard'
 import { cardList } from './data'
 import {GlobalStyle} from './global.styled'
 import { Routes, Route } from 'react-router-dom';
-
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute" 
+import MainPage from "./pages/MainPage"
 
 function App() {
+   const isAuth = true;
+
    const [cards, setCards] = useState(cardList);
    return ( 
    <Routes>   
+      <Route element={<PrivateRoute isAuth={isAuth} />}>
+         <Route path={'/'} element={<MainPage />} />
+
+         
    <GlobalStyle/>
    <div className="wrapper">
     <PopExit />
@@ -22,6 +29,7 @@ function App() {
     <Header setCards={setCards} cards={cards}/>
     <Main cardList={cards}/>
    </div>
+   </Route>
    </Routes>
    );
 }
