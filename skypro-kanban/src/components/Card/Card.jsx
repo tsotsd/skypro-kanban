@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import * as S from './Card.styled'
+
 
 const Card = ({ topic, title, date }) => {
  
@@ -12,13 +14,13 @@ const Card = ({ topic, title, date }) => {
               <S.TopicText>{topic}</S.TopicText>
           {/* <p className={colorClass}>{topic}</p> */}
             </S.CardTopic>
-            <a href="#popBrowse" target="_self">
+            <Link to="/card/5">
           <S.CardBtn>
-            <div></div>
-            <div></div>
-            <div></div>
+            <S.CardBtn></S.CardBtn>
+            <S.CardBtn></S.CardBtn>
+            <S.CardBtn></S.CardBtn>
           </S.CardBtn>
-        </a>
+        </Link>
       </S.CardGroup>
 
       <S.CardContent>
