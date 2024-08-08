@@ -1,5 +1,5 @@
 import Calendar from "../../Calendar/Calendar";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const PopBrowse = () => {
   const { id } = useParams();
@@ -63,7 +63,9 @@ const PopBrowse = () => {
               <button className="btn-edit__edit _btn-bor _hover03"><a href="#">Отменить</a></button>
               <button className="btn-edit__delete _btn-bor _hover03" id="btnDelete"><a href="#">Удалить задачу</a></button>
             </div>
-            <button className="btn-edit__close _btn-bg _hover01"><a href="#">Закрыть</a></button>
+            <button className="btn-edit__close _btn-bg _hover01">
+              <Link to="/">Закрыть</Link>
+            </button>
           </div>
                       
         </div>
