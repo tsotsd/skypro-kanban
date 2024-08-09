@@ -7,7 +7,7 @@ export const LoginPage = ({login}) => {
             <GlobalStyleSignIn />
             <Wrapper />
             <Login login={login}/>
-            <Wrapper/>
+            <Wrapper />
             </>
     )
 }
