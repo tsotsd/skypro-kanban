@@ -23,7 +23,8 @@ function App() {
 
    const navigate = useNavigate();
 
-   const login = () => {
+   const login = (e) => {
+      e.preventDufault();
       setAuth(true);
       navigate(appRoutes.MAIN)
    }
