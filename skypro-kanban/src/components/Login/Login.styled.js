@@ -78,3 +78,13 @@ export const LoginModalInput = styled.input`
   outline: none;
   padding: 10px 8px;
 `;
+
+export const LoginModalFormGroup = styled.div`
+ text-align: center;
+ color: rgba(148, 166, 190, 0.4);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.14px;
+  text-decoration: underline;
+`;

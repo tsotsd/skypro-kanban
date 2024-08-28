@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ContainerSignin, LoginButton, LoginWrapper, LoginModal, LoginModalBlock, LoginModalTtl, LoginModalForm, LoginModalInput } from "./Login.styled";
+import { ContainerSignin, LoginButton, LoginWrapper, LoginModal, LoginModalBlock, LoginModalTtl, LoginModalForm, LoginModalInput, LoginModalFormGroup } from "./Login.styled";
 
 const Login = ({login}) => {
     return (
@@ -11,13 +11,13 @@ const Login = ({login}) => {
                             <h2>Вход</h2>
                         </LoginModalTtl>
                         <LoginModalForm id="formLogin" action="#" onSubmit={login}>
-                            <input className="modal__input" type="text" name="login" id="formlogin" placeholder="Эл. почта" />
-                            <input className="modal__input" type="passport" name="passport" id="formpassport" placeholder="Пароль" />
+                            <LoginModalInput type="text" name="login" id="formlogin" placeholder="Эл. почта" /> 
+                            <LoginModalInput type="passport" name="passport" id="formpassport" placeholder="Пароль" />
                             <LoginButton type="submit">Войти</LoginButton>
-                            <div className="modal__form-group">
+                            <LoginModalFormGroup>
                                 <p>Нужно зарегистрироваться?</p>
                                 <Link to="/register">Регистрируйтесь здесь</Link>
-                            </div>    
+                            </LoginModalFormGroup>    
                         </LoginModalForm>
                     </LoginModalBlock>
                 </LoginModal>
