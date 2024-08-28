@@ -7,7 +7,8 @@ import Main from '../components/Main/Main';
 // import PopNewCard from './components/PopUps/PopNewCard/PopNewCard'
 import { useState } from 'react';
 import { cardList } from '../data';
-import {GlobalStyle, Wrapper} from '../global.styled';
+import {GlobalStyle } from '../global.styled';
+import {Wrapper} from '../components/shared.styled'
 import { Outlet } from 'react-router-dom';
 
 export default function MainPage() {

@@ -1,14 +1,14 @@
-import Login from "../../components/Login/Login";
+import Register from "../../components/Register/Register";
 // import { Wrapper } from "../../components/shared.styled"
 
-export const LoginPage = ({login}) => {
+export const RegisterPage = () => {
     return (
            <>
             {/* <Wrapper /> */}
-            <Login login={login}/>
+            <Register />
             {/* <Wrapper /> */}
             </>
     )
 }
 
-export default LoginPage;
+export default RegisterPage;

@@ -1,6 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = `
+export const GlobalStyle = createGlobalStyle`
 * {
     margin: 0;
     padding: 0;
@@ -37,10 +37,4 @@ export const GlobalStyle = `
 }
 `;
 
-export const Wrapper = styled.div`
-  max-width: 100%;
-  width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: #f1f1f1;
-`;
+
