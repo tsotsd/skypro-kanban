@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
-import { LogginButton, LogginWrapper } from "./Login.styled";
+import { ContainerSignin, LoginButton, LoginWrapper, LoginModal, LoginModalBlock, LoginModalTtl, LoginModalForm, LoginModalInput } from "./Login.styled";
 
 const Login = ({login}) => {
     return (
-        <LogginWrapper >
-            <div className="container-signin">
-                <div className="modal">
-                    <div className="modal__block">
-                        <div className="modal_ttl">
+        <LoginWrapper >
+            <ContainerSignin>
+                <LoginModal>
+                    <LoginModalBlock>
+                        <LoginModalTtl>
                             <h2>Вход</h2>
-                        </div>
-                        <form className="modal__form-login" id="formLogin" action="#" onSubmit={login}>
+                        </LoginModalTtl>
+                        <LoginModalForm id="formLogin" action="#" onSubmit={login}>
                             <input className="modal__input" type="text" name="login" id="formlogin" placeholder="Эл. почта" />
                             <input className="modal__input" type="passport" name="passport" id="formpassport" placeholder="Пароль" />
-                            <LogginButton type="submit">Войти</LogginButton>
+                            <LoginButton type="submit">Войти</LoginButton>
                             <div className="modal__form-group">
                                 <p>Нужно зарегистрироваться?</p>
                                 <Link to="/register">Регистрируйтесь здесь</Link>
                             </div>    
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </LogginWrapper> 
+                        </LoginModalForm>
+                    </LoginModalBlock>
+                </LoginModal>
+            </ContainerSignin>
+        </LoginWrapper> 
     );
 };
 
