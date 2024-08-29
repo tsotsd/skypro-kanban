@@ -40,7 +40,7 @@ function App() {
          </Route>
     </Route>
           <Route path={appRoutes.LOGIN} element={<LoginPage login = {login} />} />
-          <Route path={appRoutes.REGISTER} element={<RegisterPage />} />
+          <Route path={appRoutes.REGISTER} element={<RegisterPage register = {login}/>} />
           <Route path={appRoutes.NOT_FOUND} element={<NotFound />} />
 
    </Routes>
