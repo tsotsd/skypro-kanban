@@ -33,6 +33,12 @@ function App() {
       navigate(appRoutes.MAIN)
    }
 
+   const logout = (e) => {
+      e.preventDefault();
+      setAuth(false);
+      navigate(appRoutes.MAIN)
+   }
+
    return ( 
    <Routes>   
       <Route element={<PrivateRoute isAuth={isAuth} />}>
