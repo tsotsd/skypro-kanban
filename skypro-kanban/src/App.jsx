@@ -9,6 +9,7 @@ import CardPage from './pages/CardPage';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NotFound } from './pages/404/NotFound';
+import ExitPage from './pages/Exit/ExitPage';
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
           <Route path={appRoutes.LOGIN} element={<LoginPage login = {login} />} />
           <Route path={appRoutes.REGISTER} element={<RegisterPage register = {login}/>} />
           <Route path={appRoutes.NOT_FOUND} element={<NotFound />} />
-
+          <Route path={appRoutes.EXIT} element={<ExitPage logout = {logout}/>} />
    </Routes>
    );
 }
