@@ -20,6 +20,7 @@ export const LoginButton = styled.button`
   line-height: 1;
   font-weight: 500;
   margin-right: 20px;
+  margin-top: 30px;
   ${hover01}
 `;
 
@@ -77,6 +78,7 @@ export const LoginModalInput = styled.input`
   border: 0.7px solid rgba(148, 166, 190, 0.4);
   outline: none;
   padding: 10px 8px;
+  margin-top: 1em;
 `;
 
 export const LoginModalFormGroup = styled.div`

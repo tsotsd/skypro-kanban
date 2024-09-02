@@ -11,9 +11,10 @@ const Login = ({login}) => {
                             <h2>Регистрация</h2>
                         </LoginModalTtl>
                         <LoginModalForm id="formLogin" action="#" onSubmit={login}>
+                            <LoginModalInput type="text" name="name" id="formname" placeholder="Имя" /> 
                             <LoginModalInput type="text" name="login" id="formlogin" placeholder="Эл. почта" /> 
                             <LoginModalInput type="passport" name="passport" id="formpassport" placeholder="Пароль" />
-                            <LoginButton type="submit">Войти</LoginButton>
+                            <LoginButton type="submit">Зарегистрироваться</LoginButton>
                             <LoginModalFormGroup>
                                 <p>Нужно зарегистрироваться?</p>
                                 <Link to="/register">Регистрируйтесь здесь</Link>
