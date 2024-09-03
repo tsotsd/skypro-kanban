@@ -47,7 +47,7 @@ const Header = ({ setCards, cards }) => {
               <p>Темная тема</p>
               <input type="checkbox" className="checkbox" name="checkbox" />
             </div>
-            <button type="button" className="_hover03"><Link to="/">Выйти</Link></button>
+            <button type="button" className="_hover03"><Link to="/exit">Выйти</Link></button>
           </div>
         )}
         </nav>					
