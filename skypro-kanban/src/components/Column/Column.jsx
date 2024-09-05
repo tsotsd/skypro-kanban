@@ -8,7 +8,7 @@ const Column = ({ title, cardList }) => {
     </ColumnTitle>
     <Cards>
       {cardList.map(({id, topic, title, date}) => (
-      <Card key={id} topic={topic} title={title} date={date} />
+      <Card key={id} topic={topic} title={title} date={date} id={id} />
       ))}
       <div>
       </div>

@@ -1,30 +1,57 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header/Header'
-import Main from './components/Main/Main'
-import PopBrowse from './components/PopUps/PopBrowse/PopBrowse'
-import PopExit from './components/PopUps/PopExit/PopExit'
-import PopNewCard from './components/PopUps/PopNewCard/PopNewCard'
-import { cardList } from './data'
-import {GlobalStyle} from './global.styled'
+import { Routes, Route } from 'react-router-dom';
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute"; 
 
+import LoginPage from "./pages/LoginPage/LoginPage"
+import RegisterPage from "./pages/RegisterPage/RegisterPage"
+
+import MainPage from './pages/MainPage';
+import CardPage from './pages/CardPage';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { NotFound } from './pages/404/NotFound';
+import ExitPage from './pages/Exit/ExitPage';
 
 
 function App() {
-   const [cards, setCards] = useState(cardList);
+   // const isAuth = true;
+   const [isAuth, setAuth] = useState(false);
+
+   const appRoutes = {
+      LOGIN: "/login",
+      REGISTER: "/register",
+      MAIN: "/",
+      CARD: "/card/:id",
+      EXIT: "/exit",
+      NOT_FOUND: "*",
+   }
+
+   const navigate = useNavigate();
+
+   const login = (e) => {
+      e.preventDefault();
+      setAuth(true);
+      navigate(appRoutes.MAIN)
+   }
+
+   const logout = (e) => {
+      e.preventDefault();
+      setAuth(false);
+      navigate(appRoutes.MAIN)
+   }
+
    return ( 
-   <>   
-   <GlobalStyle/>
-   <div className="wrapper">
-    <PopExit />
-    <PopNewCard />
-    <PopBrowse />
-    <Header setCards={setCards} cards={cards}/>
-    <Main cardList={cards}/>
-   </div>
-   </>
+   <Routes>   
+      <Route element={<PrivateRoute isAuth={isAuth} />}>
+         <Route path={appRoutes.MAIN} element={<MainPage />}>
+            <Route path={appRoutes.CARD} element={<CardPage />} />
+         </Route>
+    </Route>
+          <Route path={appRoutes.LOGIN} element={<LoginPage login = {login} />} />
+          <Route path={appRoutes.REGISTER} element={<RegisterPage register = {login}/>} />
+          <Route path={appRoutes.NOT_FOUND} element={<NotFound />} />
+          <Route path={appRoutes.EXIT} element={<ExitPage logout = {logout}/>} />
+   </Routes>
    );
 }
 
-
-export default App
+export default App;
