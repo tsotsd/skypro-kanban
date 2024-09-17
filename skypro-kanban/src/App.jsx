@@ -10,11 +10,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NotFound } from './pages/404/NotFound';
 import ExitPage from './pages/Exit/ExitPage';
+import { auth } from './api';
 
 
 function App() {
    // const isAuth = true;
-   const [isAuth, setAuth] = useState(false);
+   const [isAuth, setAuth] = useState(null);
 
    const appRoutes = {
       LOGIN: "/login",
@@ -27,10 +28,15 @@ function App() {
 
    const navigate = useNavigate();
 
-   const login = (e) => {
+   const login = (e, login, password) => {
       e.preventDefault();
-      setAuth(true);
-      navigate(appRoutes.MAIN)
+      auth({login, password}).then((user) => {
+         setAuth(user);
+         navigate(appRoutes.MAIN)
+      }).catch((err) => {
+         console.error(err);
+         
+      })
    }
 
    const logout = (e) => {
@@ -42,7 +48,7 @@ function App() {
    return ( 
    <Routes>   
       <Route element={<PrivateRoute isAuth={isAuth} />}>
-         <Route path={appRoutes.MAIN} element={<MainPage />}>
+         <Route path={appRoutes.MAIN} element={<MainPage isAuth = {isAuth} />}>
             <Route path={appRoutes.CARD} element={<CardPage />} />
          </Route>
     </Route>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Column from "../Column/Column";
 import { statusList } from "../../data";
 import * as S from "./Main.styled";
@@ -15,15 +14,8 @@ import { Container } from "../shared.styled";
 //   document.getElementById('root')
 // );
 
-const Main = ({cardList}) => {
+const Main = ({cardList, isLoading}) => {
 
-  const [isLoading, setLoading] = useState(true);
-    useEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000)
-    }, []);
-    
     return (   
       <S.Main>
         <Container>
