@@ -2,9 +2,6 @@ import '../App.css'
 
 import Header from '../components/Header/Header';
 import Main from '../components/Main/Main';
-// import PopBrowse from './components/PopUps/PopBrowse/PopBrowse'
-// import PopExit from './components/PopUps/PopExit/PopExit'
-// import PopNewCard from './components/PopUps/PopNewCard/PopNewCard'
 import { useState, useEffect } from 'react';
 
 // import { cardList } from '../data';
@@ -28,6 +25,7 @@ export default function MainPage({isAuth}) {
     //     setLoading(false);
     //   }, 1000)
     }, []);
+
 
    return ( 
        <>
